@@ -6,3 +6,4 @@ def bubble(l):
 			if l[g] > l[g + 1]:
 				# swap them
 				l[g], l[g + 1] = l[g + 1], l[g]
+	return(l)

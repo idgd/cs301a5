@@ -27,3 +27,5 @@ def merge(l):
 
 	# utility function
 	l = merge_sorted(a,b)
+
+	return(l)
