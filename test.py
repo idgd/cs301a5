@@ -32,5 +32,4 @@ class TestSort(unittest.TestCase):
 		shuffle(l)
 		self.assertEqual(merge.merge(l),t)
 
-if __name__ == '__main__':
-    unittest.main()
+unittest.main()

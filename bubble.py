@@ -7,3 +7,6 @@ def bubble(l):
 				# swap them
 				l[g], l[g + 1] = l[g + 1], l[g]
 	return(l)
+
+# nested for loop
+# worst case O(n^2)

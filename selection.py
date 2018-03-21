@@ -12,3 +12,6 @@ def selection(l):
 		r.append(l.pop(l.index(m)))
 	# return value
 	return(r)
+
+# for loop nested inside while loop
+# since both will have the same max length: O(n^2)

@@ -16,3 +16,7 @@ def insertion(l):
 		r.insert(i,v)
 	# return list
 	return(r)
+
+# while loop over one loop, for loop over another nested inside
+# additionally, insert inside while loop
+# since both lists will have the same maximum length: O(n^2)

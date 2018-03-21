@@ -29,3 +29,7 @@ def merge(l):
 	l = merge_sorted(a,b)
 
 	return(l)
+
+# merge_sorted is linear ([::-1] reverses)
+# merge is log(n). n halves every recursive call, so log(n)
+# since merge_sorted is called inside merge, runtime is O(n log(n))
