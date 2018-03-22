@@ -4,32 +4,24 @@ import bubble
 import selection
 import merge
 
-from random import shuffle
+from itertools import permutations
 
 class TestSort(unittest.TestCase):
+	def bench(self,f):
+		l = [f for f in range(9)]
+		for g in permutations(l):
+			self.assertEqual(f(list(g)),l)
 
 	def test_insert(self):
-		l = [f for f in range(16)]
-		t = l[:]
-		shuffle(l)
-		self.assertEqual(insertion.insertion(l),t)
+		self.bench(insertion.insertion)
 
 	def test_bubble(self):
-		l = [f for f in range(16)]
-		t = l[:]
-		shuffle(l)
-		self.assertEqual(bubble.bubble(l),t)
+		self.bench(bubble.bubble)
 
 	def test_selection(self):
-		l = [f for f in range(16)]
-		t = l[:]
-		shuffle(l)
-		self.assertEqual(selection.selection(l),t)
+		self.bench(selection.selection)
 
 	def test_merge(self):
-		l = [f for f in range(16)]
-		t = l[:]
-		shuffle(l)
-		self.assertEqual(merge.merge(l),t)
+		self.bench(merge.merge)
 
 unittest.main()
