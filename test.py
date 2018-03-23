@@ -8,9 +8,13 @@ from itertools import permutations
 
 class TestSort(unittest.TestCase):
 	def bench(self,f):
-		l = [f for f in range(9)]
-		for g in permutations(l):
-			self.assertEqual(f(list(g)),l)
+		l = [f for f in range(-4,5)]
+		for g in range(10):
+			for h in permutations(l,g):
+				h = list(h)
+				s = h[:]
+				s.sort()
+				self.assertEqual(f(h),s)
 
 	def test_insert(self):
 		self.bench(insertion.insertion)
