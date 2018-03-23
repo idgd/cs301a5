@@ -19,4 +19,4 @@ def insertion(l):
 
 # while loop over one loop, for loop over another nested inside
 # additionally, insert inside while loop, linear time
-# since both lists will have the same maximum length: O(n^3)
+# since both lists will have the same maximum length: O(n^2)
