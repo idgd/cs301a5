@@ -1,3 +1,5 @@
+from insertion import insertion
+
 def merge_sorted(a,b):
 	# reverse once so all other operations are constant
 	a, b = a[::-1], b[::-1]
@@ -17,9 +19,9 @@ def merge_sorted(a,b):
 	return(r)
 
 def merge(l):
-	# if it's 1 big
-	if len(l) < 2:
-		return(l)
+	# if it's small
+	if len(l) < 9:
+		return(insertion(l))
 
 	# split it in half
 	m = len(l)//2
