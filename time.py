@@ -5,7 +5,6 @@ import merge
 
 from time import time
 from random import shuffle
-from itertools import permutations
 
 # likely mergesort will have the best runtime, as theoretically it's O(n log(n)) < O(n^2) of the rest
 
